@@ -27,13 +27,14 @@
 							</tr>
 						</thead>
 						<tbody>
+							{% for todo in todolist %}
 							<tr class="fw-normal">
 							<th>
 								<i class="fa-solid fa-star text-warning"></i>
-								<span class="ms-2">농구하기</span>
+								<span class="ms-2">{{ todo.todo }}</span>
 							</th>
 							<td class="align-middle">
-								<span>3시에 기념관 앞에서 농구하기</span>
+								<span>{{ todo.description }}</span>
 							</td>
 							<td class="align-middle">
 								<h5 class="mb-0"><a href="#" role="button" class="badge bg-secondary" style="text-decoration-line: none;">수정하기</a></h6>
@@ -43,76 +44,7 @@
 								<a href="#!" data-bs-toggle="tooltip" data-bs-title="Remove"><i class="fa-solid fa-trash-can text-danger"></i></a>
 							</td>
 							</tr>
-							<tr class="fw-normal">
-							<th>
-								<i class="fa-solid fa-star text-warning"></i>
-								<span class="ms-2">강의실 빌리기</span>
-							</th>
-							<td class="align-middle">성결관 B101 강의실 빌리기</td>
-							<td class="align-middle">
-								<h5 class="mb-0"><a href="#" role="button" class="badge bg-secondary" style="text-decoration-line: none;">수정하기</a></h6>
-							</td>
-							<td class="align-middle">
-								<a href="#!" data-bs-toggle="tooltip" data-bs-title="Done"><i class="fa-solid fa-check text-success me-3"></i></a>
-								<a href="#!" data-bs-toggle="tooltip" data-bs-title="Remove"><i class="fa-solid fa-trash-can text-danger"></i></a>
-							</td>
-							</tr>
-							<tr class="fw-normal">
-							<th>
-								<i class="fa-solid fa-star"></i>
-								<span class="ms-2">Danny McChain</span>
-							</th>
-							<td class="align-middle">Office rent</td>
-							<td class="align-middle">
-								<h5 class="mb-0"><a href="#" role="button" class="badge bg-secondary" style="text-decoration-line: none;">수정하기</a></h6>
-							</td>
-							<td class="align-middle">
-								<a href="#!" data-bs-toggle="tooltip" data-bs-title="Done"><i class="fa-solid fa-check text-success me-3"></i></a>
-								<a href="#!" data-bs-toggle="tooltip" data-bs-title="Remove"><i class="fa-solid fa-trash-can text-danger"></i></a>
-							</td>
-							</tr>
-							<tr class="fw-normal">
-							<th>
-								<i class="fa-solid fa-star"></i>
-								<span class="ms-2">Alexa Chung</span>
-							</th>
-							<td class="align-middle">Office grocery shopping</td>
-							<td class="align-middle">
-								<h5 class="mb-0"><a href="#" role="button" class="badge bg-secondary" style="text-decoration-line: none;">수정하기</a></h6>
-							</td>
-							<td class="align-middle">
-								<a href="#!" data-bs-toggle="tooltip" data-bs-title="Done"><i class="fa-solid fa-check text-success me-3"></i></a>
-								<a href="#!" data-bs-toggle="tooltip" data-bs-title="Remove"><i class="fa-solid fa-trash-can text-danger"></i></a>
-							</td>
-							</tr>
-							<tr class="fw-normal">
-							<th class="">
-								<i class="fa-solid fa-star text"></i>
-								<span class="ms-2">Ben Smith</span>
-							</th>
-							<td class="align-middle">Ask for Lunch to Clients</td>
-							<td class="align-middle">
-								<h5 class="mb-0"><a href="#" role="button" class="badge bg-secondary" style="text-decoration-line: none;">수정하기</a></h6>
-							</td>
-							<td class="align-middle">
-								<a href="#!" data-bs-toggle="tooltip" data-bs-title="Done"><i class="fa-solid fa-check text-success me-3"></i></a>
-								<a href="#!" data-bs-toggle="tooltip" data-bs-title="Remove"><i class="fa-solid fa-trash-can text-danger"></i></a>
-							</td>
-							</tr>
-							<tr class="fw-normal">
-							<th class="border-0">
-								<i class="fa-solid fa-star"></i>
-								<span class="ms-2">Annie Hall</span>
-							</th>
-							<td class="border-0 align-middle">Create weekly tasks plan</td>
-							<td class="border-0 align-middle">
-								<h5 class="mb-0"><a href="#" role="button" class="badge bg-secondary" style="text-decoration-line: none;">수정하기</a></h6>
-							</td>
-							<td class="border-0 align-middle">
-								<a href="#!" data-bs-toggle="tooltip" data-bs-title="Done"><i class="fa-solid fa-check text-success me-3"></i></a>
-								<a href="#!" data-bs-toggle="tooltip" data-bs-title="Remove"><i class="fa-solid fa-trash-can text-danger"></i></a>
-							</td>
-							</tr>
+							{% endfor %}
 						</tbody>
 					</table>
 				</div>
