@@ -30,7 +30,11 @@
 							{% for todo in todolist %}
 							<tr class="fw-normal">
 							<th>
+								{% if todo.important %}
 								<i class="fa-solid fa-star text-warning"></i>
+								{% else %}
+								<i class="fa-solid fa-star"></i>
+								{% endif %}
 								<span class="ms-2">{{ todo.todo }}</span>
 							</th>
 							<td class="align-middle">
@@ -49,7 +53,7 @@
 					</table>
 				</div>
 				<div class="card-footer text-end p-3">
-					<button class="btn btn-primary">Add Task</button>
+					<a href="{% url 'create'%}" class="btn btn-primary">Add Task</a>
 				</div>
 			</div>
 		</div>

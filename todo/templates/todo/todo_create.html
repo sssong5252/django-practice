@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Create Todo</title>
+	<link rel="stylesheet" href="{% static 'todo/bootstrap/bootstrap.min.css' %}">
+</head>
+<body>
+	<h1>Create New Todos</h1>
+	<hr/>
+	<form method='post' enctype="multipart/form-data">
+		{% csrf_token %}
+		<table>
+			<tbody>
+				<tr>
+					<th><label for="id_todo">Todo:</label></th>
+					<td><input type="text" name="todo" maxlength="30" required="" id="id_todo"></td>
+				</tr>
+				<tr>
+					<th><label for="id_description">Description:</label></th>
+					<td><textarea name="description" cols="40" rows="10" required="" id="id_description"></textarea></td>
+				</tr>
+				<tr>
+					<th><label for="id_important">Important:</label></th>
+					<td><input type="checkbox" name="important" id="id_important"></td>
+				</tr>
+				<tr>
+					<th><label for="id_complete">Complete:</label></th>
+					<td><input type="checkbox" name="complete" id="id_complete"></td>
+				</tr>
+				</tbody>
+			</table>
+			<button type="submit" class="btn btn-primary" style="margin-left: 350px;">Submit</button>
+	</form>
+</body>
+</html>
